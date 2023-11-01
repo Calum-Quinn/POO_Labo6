@@ -99,3 +99,4 @@ Etud. David Gilmour (#4312) - SI6-1
 |17:20 |              |              |              |              |              |
 |      |--------------|--------------|--------------|--------------|--------------|
 
+Faire un rapport pour expliquer vos choix d'implémentation.
