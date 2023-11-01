@@ -29,7 +29,7 @@ public class Groupe {
 
         // Print header
         String[] jours = {"Lun","Mar","Mer","Jeu","Ven"};
-        String[] heures = {"8:30","9:15","10:25","12:00","13:15","14:00","14:55","15:45","16:35","17:20"};
+        String[] heures = {"8:30","9:15","10:25","11:15","12:00","13:15","14:00","14:55","15:45","16:35","17:20"};
         horaire.append("     |");
         for (String jour : jours) {
             horaire.append(" ").append(jour).append("         |");
