@@ -1,5 +1,7 @@
+package src;
+
 public class Professeur extends Personne {
-    private String abreviation;
+    private final String abreviation;
     private Lecon[] lecons;
 
     public Professeur(String nom, String prenom, String abreviation) {
@@ -16,6 +18,7 @@ public class Professeur extends Personne {
     }
 
     public String toString() {
-        return "Prof. " + super.toString() + " " + "(" + this.abreviation + ")";
+        //return "Prof. " + super.toString() + " " + "(" + this.abreviation + ")";
+        return String.format("Prof. %s (%s)",super.toString(),this.abreviation);
     }
 }

@@ -1,10 +1,36 @@
+package src;
+
 public class Lecon {
-    private String matiere;
-    private int jourSemaine;
-    private int periodeDebut;
-    private int duree;
-    private String salle;
-    private Professeur professeur;
+    private final String matiere;
+    private final int jourSemaine;
+    private final int periodeDebut;
+    private final int duree;
+    private final String salle;
+    private final Professeur professeur;
+
+    public String getMatiere() {
+        return matiere;
+    }
+
+    public int getJourSemaine() {
+        return jourSemaine;
+    }
+
+    public int getPeriodeDebut() {
+        return periodeDebut;
+    }
+
+    public int getDuree() {
+        return duree;
+    }
+
+    public String getSalle() {
+        return salle;
+    }
+
+    public Professeur getProfesseur() {
+        return professeur;
+    }
 
     public Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle, Professeur professeur) {
         this.matiere = matiere;

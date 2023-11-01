@@ -13,7 +13,7 @@ Définir une classe de test contenant la méthode main() de l’application.
 - Définir un groupe IL6-1 contenant les quatre premiers étudiants et un groupe SI6-1 contenant les deux derniers.
 - Affecter au groupe IL6-1 toutes les leçons existantes. Affecter au groupe SI6-1 toutes les leçons de POO.
 - Définir un tableau contenant toutes les personnes et en afficher les éléments en tirant parti du mécanisme de liaison dynamique.
-- Afficher les informations relatives au groupe IL6-1 (nom, nombre d’étudiants, horaire).
+- Afficher les informations relatives au groupe IL6-1 (nom, nombre d’étudiants, horaire). Le nom est composé de l'orientation, du trimestre et du numéro du groupe. IL6-1 est le groupe numéro 1, d'orientation IL, du 6ème trimestre.
 - Afficher l’horaire du professeur PDO.
 
 ## Indications

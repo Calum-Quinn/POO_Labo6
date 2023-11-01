@@ -1,3 +1,5 @@
+package src;
+
 public abstract class Personne {
     private final String nom;
     private final String prenom;
