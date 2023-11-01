@@ -2,6 +2,8 @@
 
 Le diagramme de classes UML fourni ci-dessous en annexe s’inspire de la donnée du laboratoire 2 (en particulier les départements, et donc leurs doyens, n’y sont pas représentés).
 
+![Lab06Ecole.gif](Lab06Ecole.gif)
+
 Implémenter ce diagramme des classes en prenant garde à bien factoriser les traitements et en ne pas compromettant pas l’encapsulation des données.
 
 Définir une classe de test contenant la méthode main() de l’application.
