@@ -27,6 +27,6 @@ public class Groupe {
     }
     
     public void definirLecons(Lecon[] lecons) {
-
+        this.lecons = lecons;
     }
 }

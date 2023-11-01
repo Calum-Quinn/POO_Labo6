@@ -6,15 +6,16 @@ public class Lecon {
     private String salle;
     private Professeur professeur;
 
-    public Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle) {
+    public Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle, Professeur professeur) {
         this.matiere = matiere;
         this.jourSemaine = jourSemaine;
         this.periodeDebut = periodeDebut;
         this.duree = duree;
         this.salle = salle;
+        this.professeur = professeur;
     }
 
-    public String horaire() {
+    public static String horaire() {
         return "";
     }
 }
