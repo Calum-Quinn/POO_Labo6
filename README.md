@@ -1,4 +1,4 @@
-# POO_Labo6
+# Labo 06: Ecole
 
 Le diagramme de classes UML fourni ci-dessous en annexe s’inspire de la donnée du laboratoire 2 (en particulier les départements, et donc leurs doyens, n’y sont pas représentés).
 
