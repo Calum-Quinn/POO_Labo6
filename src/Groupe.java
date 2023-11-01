@@ -41,13 +41,14 @@ public class Groupe {
         }
         System.out.println();
 
-        int periode = 0;
-
+        // Print lines with time and lessons
         for (int j = 0; j < heures.length; ++j) {
+            // Table to show whether a certain day has a double period at a specific time
+            boolean[] doublePeriode = {false,false,false,false,false};
             System.out.printf("%5s|",heures[j]);
             for (int k = 0; k < jours.length; ++k) {
                 String print = "";
-                // If there is a class in this specific period
+                // If there is a class during this period
                 for (Lecon lecon : lecons) {
                     if (lecon.getPeriodeDebut() == j + 1 && lecon.getJourSemaine() == k + 1) {
 
@@ -60,6 +61,13 @@ public class Groupe {
                         else {
                             print += "   ";
                         }
+
+                        // If there is a double period we need to specify which line not to draw on the next row
+                        if (lecon.getDuree() == 90) {
+                            doublePeriode[k] = true;
+//                            doublePeriode = k + 1;
+                        }
+
                         break;
                     }
                 }
@@ -67,11 +75,16 @@ public class Groupe {
             }
             System.out.println();
 
-            // Print the last line
             System.out.print("     |");
+
             for (int l = 0; l < jours.length; ++l) {
+                if (doublePeriode[l]) {
+                    System.out.print("             |");
+                    continue;
+                }
                 System.out.print("-------------|");
             }
+
             System.out.println();
         }
 
