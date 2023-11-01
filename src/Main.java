@@ -15,7 +15,7 @@ public class Main {
                 new Lecon("POO", 4, 8, 90, "H02", professeurs[1]),
                 new Lecon("SYE", 1, 1, 90, "G01", professeurs[0]),
                 new Lecon("SYE", 4, 3, 90, "A09", professeurs[0]),
-                new Lecon("TIC", 2, 10, 45, "F06", null)
+                new Lecon("TIC", 2, 9, 45, "F06", null)
         };
 
         Etudiant[] etudiants = new Etudiant[]{
@@ -56,5 +56,12 @@ public class Main {
         System.out.println("-- Horaire du groupe " + groupes[0].nom() + " (" + groupes[0].nombreEtudiants() + " etudiants)");
         System.out.println();
         System.out.println(groupes[0].horaire());
+        System.out.println();
+
+        // Output the information pertaining prof. PDO
+        System.out.println("-- Horaire " + professeurs[1]);
+        System.out.println();
+        System.out.println(professeurs[1].horaire());
+        System.out.println();
     }
 }

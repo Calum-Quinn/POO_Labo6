@@ -25,27 +25,27 @@ public class Groupe {
 
         // IL FAUDRAIT SUREMENT FAIRE UNE CLASSE HORAIRE
 
+        StringBuilder horaire = new StringBuilder();
+
         // Print header
         String[] jours = {"Lun","Mar","Mer","Jeu","Ven"};
         String[] heures = {"8:30","9:15","10:25","12:00","13:15","14:00","14:55","15:45","16:35","17:20"};
-        System.out.print("     |");
+        horaire.append("     |");
         for (String jour : jours) {
-            System.out.print(" " + jour + "         |");
+            horaire.append(" ").append(jour).append("         |");
         }
-        System.out.println();
+        horaire.append('\n');
 
         // Print line under header
-        System.out.print("     |");
-        for (int i = 0; i < jours.length; ++i) {
-            System.out.print("-------------|");
-        }
-        System.out.println();
+        horaire.append("     |");
+        horaire.append("-------------|".repeat(jours.length));
+        horaire.append('\n');
 
         // Print lines with time and lessons
         for (int j = 0; j < heures.length; ++j) {
             // Table to show whether a certain day has a double period at a specific time
             boolean[] doublePeriode = {false,false,false,false,false};
-            System.out.printf("%5s|",heures[j]);
+            horaire.append(String.format("%5s|", heures[j]));
             for (int k = 0; k < jours.length; ++k) {
                 String print = "";
                 // If there is a class during this period
@@ -65,30 +65,29 @@ public class Groupe {
                         // If there is a double period we need to specify which line not to draw on the next row
                         if (lecon.getDuree() == 90) {
                             doublePeriode[k] = true;
-//                            doublePeriode = k + 1;
                         }
 
                         break;
                     }
                 }
-                System.out.printf("%13s|",print);
+                horaire.append(String.format("%13s|",print));
             }
-            System.out.println();
+            horaire.append('\n');
 
-            System.out.print("     |");
-
+            // Print row with lines between periods
+            horaire.append("     |");
             for (int l = 0; l < jours.length; ++l) {
+                // No line if double period
                 if (doublePeriode[l]) {
-                    System.out.print("             |");
+                    horaire.append("             |");
                     continue;
                 }
-                System.out.print("-------------|");
+                horaire.append("-------------|");
             }
-
-            System.out.println();
+            horaire.append('\n');
         }
 
-        return "";
+        return horaire.toString();
     }
 
     public String nom() {
