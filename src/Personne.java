@@ -10,6 +10,6 @@ public abstract class Personne {
     }
 
     public String toString() {
-        return this.prenom + " " + this.nom;
+        return String.format("%s %s", prenom, nom);
     }
 }
