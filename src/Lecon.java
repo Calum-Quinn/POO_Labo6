@@ -51,7 +51,7 @@ public class Lecon {
             int nbSeparationsVides = 0;
 
             for (int j = 2; j < nbLignes; ++j) {
-                // If the row is even, it's a lesson else it's a separation
+                // If the row is even, it's a lesson otherwise it's a separation
                 if (j % 2 == 0) {
                     boolean leconTrouvee = false;
                     // Create a lesson cell if a lesson was found for the current day and period
@@ -65,7 +65,7 @@ public class Lecon {
                             break;
                         }
                     }
-                    // If no lesson was found, we create an empty cell
+                    // If no lesson was found, create an empty cell
                     if (!leconTrouvee) {
                         grille[j][i] = cellule(null, null, null);
                     }

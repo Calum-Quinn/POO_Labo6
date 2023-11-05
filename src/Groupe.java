@@ -22,7 +22,7 @@ public class Groupe {
         this.trimestre = trimestre;
         this.orientation = orientation;
         this.etudiants = etudiants;
-        // Assign group to each student
+        // Assign a group to each student
         for (Etudiant etudiant : etudiants) {
             etudiant.definirGroupe(this);
         }
