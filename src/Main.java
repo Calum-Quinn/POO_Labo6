@@ -2,6 +2,10 @@ package src;
 
 import java.util.Arrays;
 
+/**
+ * @author Calum Quinn
+ * @author Dylan Ramos
+ */
 public class Main {
     public static void main(String[] args) {
         Professeur[] professeurs = new Professeur[]{
@@ -27,22 +31,12 @@ public class Main {
                 new Etudiant("Gilmour", "David", 4312),
         };
 
-        // ON DOIT UTILISER SOUVENT LES GROUPES ET LEURS METHODES DONC ON PEUT PEUT-ETRE DEFINIR DES VARIABLES
-        // E.G.
-        /*
-        Groupe IL6_1 = new Groupe(1, 6, "IL", Arrays.copyOfRange(etudiants, 0, 4));
-        Groupe SI6_1 = new Groupe(1, 6, "SI", Arrays.copyOfRange(etudiants, etudiants.length - 2, etudiants.length));
-         */
-
         Groupe[] groupes = new Groupe[]{
                 new Groupe(1, 6, "IL", Arrays.copyOfRange(etudiants, 0, 4)),
                 new Groupe(1, 6, "SI", Arrays.copyOfRange(etudiants, etudiants.length - 2, etudiants.length))
         };
 
-        // Define each group's lessons
-        groupes[0].definirLecons(lecons);
-        professeurs[1].definirLecons(Arrays.copyOfRange(lecons, 0, 3));
-
+        // Display school's members
         System.out.println("-- Membres de l'ecole\n");
         Personne[] personnes = new Personne[professeurs.length + etudiants.length];
         System.arraycopy(professeurs, 0, personnes, 0, professeurs.length);
@@ -50,6 +44,11 @@ public class Main {
         for (Personne personne : personnes) {
             System.out.println(personne);
         }
+
+        // Define lessons for the group IL6-1
+        groupes[0].definirLecons(lecons);
+        // Define lessons for the teacher PDO
+        professeurs[1].definirLecons(Arrays.copyOfRange(lecons, 0, 3));
 
         System.out.println(groupes[0].horaire());
         System.out.println(professeurs[1].horaire());

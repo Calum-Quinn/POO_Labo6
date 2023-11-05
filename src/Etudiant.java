@@ -1,5 +1,9 @@
 package src;
 
+/**
+ * @author Calum Quinn
+ * @author Dylan Ramos
+ */
 public class Etudiant extends Personne {
     private final int matricule;
     private Groupe groupe;

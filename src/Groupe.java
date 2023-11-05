@@ -1,5 +1,9 @@
 package src;
 
+/**
+ * @author Calum Quinn
+ * @author Dylan Ramos
+ */
 public class Groupe {
     private final int numero;
     private final int trimestre;
@@ -10,6 +14,9 @@ public class Groupe {
     public Groupe(int numero, int trimestre, String orientation, Etudiant[] etudiants) {
         if (etudiants == null) {
             throw new RuntimeException("Il faut au moins 1 étudiant dans un groupe");
+        }
+        if(numero < 0 || trimestre < 0 || orientation == null || orientation.isEmpty()) {
+            throw new RuntimeException("Le numéro et le trimestre doivent être positifs et l'orientation ne peut pas être vide");
         }
         this.numero = numero;
         this.trimestre = trimestre;

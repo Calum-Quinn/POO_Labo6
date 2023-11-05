@@ -1,11 +1,18 @@
 package src;
 
+/**
+ * @author Calum Quinn
+ * @author Dylan Ramos
+ */
 public class Professeur extends Personne {
     private final String abreviation;
     private Lecon[] lecons;
 
     public Professeur(String nom, String prenom, String abreviation) {
         super(nom, prenom);
+        if (abreviation == null || abreviation.isEmpty()) {
+            throw new RuntimeException("L'abréviation ne peut pas être vide");
+        }
         this.abreviation = abreviation;
     }
 
